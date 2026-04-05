@@ -385,7 +385,7 @@ void Abc_ShowFile( char * FileNameDot, int fKeepDot )
     // generate the visualization file using DOT
 #ifdef WIN32
     if ( fUseFastLargeGraph )
-        sprintf( CommandDot,  "%s -Tsvg -o \"%s\" \"%s\"", pSfdpNameWin, FileNameSvg, FileNameDot );
+        sprintf( CommandDot,  "%s -Goverlap=prism -GK=8 -Gsep=+80 -Gsplines=false -Tsvg -o \"%s\" \"%s\"", pSfdpNameWin, FileNameSvg, FileNameDot );
     else
         sprintf( CommandDot,  "%s -Tsvg -o \"%s\" \"%s\"", pDotName, FileNameSvg, FileNameDot );
 #else
